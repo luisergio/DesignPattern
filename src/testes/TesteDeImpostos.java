@@ -1,10 +1,10 @@
-package Testes;
+package testes;
 
-import Business.Orcamento;
-import Impostos.impl.ICCC;
-import Impostos.impl.ICMS;
-import Impostos.impl.ISS;
-import Impostos.Imposto;
+import domain.OrcamentoDomain;
+import impostos.impl.ICCC;
+import impostos.impl.ICMS;
+import impostos.impl.ISS;
+import impostos.Imposto;
 
 public class TesteDeImpostos {
 
@@ -13,7 +13,7 @@ public class TesteDeImpostos {
         Imposto iss = new ISS();
         Imposto iccc = new ICCC();
 
-        Orcamento orcamento = new Orcamento(500.0);
+        OrcamentoDomain orcamento = new OrcamentoDomain(500.0);
 
         double valorIcms = icms.calcula(orcamento);
         System.out.println("Valor ICMS: " + valorIcms);
@@ -23,9 +23,9 @@ public class TesteDeImpostos {
 
 
         //Exercício sobre ICCC
-        Orcamento orcamento2 = new Orcamento(1000.0);
-        Orcamento orcamento3 = new Orcamento(1400.0);
-        Orcamento orcamento4 = new Orcamento(5000.0);
+        OrcamentoDomain orcamento2 = new OrcamentoDomain(1000.0);
+        OrcamentoDomain orcamento3 = new OrcamentoDomain(1400.0);
+        OrcamentoDomain orcamento4 = new OrcamentoDomain(5000.0);
 
         double valorIcc = iccc.calcula(orcamento);
         System.out.println("Valor ICCC: " + valorIcc);
@@ -35,7 +35,5 @@ public class TesteDeImpostos {
         System.out.println("Valor ICCC: " + valorIcc);
         valorIcc = iccc.calcula(orcamento4);
         System.out.println("Valor ICCC: " + valorIcc);
-
-
     }
 }

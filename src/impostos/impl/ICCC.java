@@ -1,12 +1,12 @@
-package Impostos.impl;
+package impostos.impl;
 
-import Business.Orcamento;
-import Impostos.Imposto;
+import domain.OrcamentoDomain;
+import impostos.Imposto;
 
 public class ICCC implements Imposto {
 
     @Override
-    public double calcula(Orcamento orcamento) {
+    public double calcula(OrcamentoDomain orcamento) {
         final double valor = orcamento.getValor();
         if (valor < 1000.0)
             return valor * 0.05;

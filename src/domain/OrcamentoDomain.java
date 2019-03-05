@@ -1,10 +1,10 @@
-package Business;
+package domain;
 
-public class Orcamento {
+public class OrcamentoDomain {
 
     private double valor;
 
-    public Orcamento(double valor)
+    public OrcamentoDomain(double valor)
     {
 
         this.valor = valor;
